@@ -58,14 +58,14 @@ def word_count_dict(filename):
     for line in input_file:
        words = line.split()
        for word in words:
-      word = word.lower()
+          word = word.lower()
       # Special case if we're seeing this word for the first time.
-      if not word in word_count:
-        word_count[word] = 1
-      else:
-        word_count[word] = word_count[word] + 1
-  input_file.close()  # Not strictly required, but good form.
-  return word_count
+          if not word in word_count:
+             word_count[word] = 1
+          else:
+             word_count[word] = word_count[word] + 1
+    input_file.close()  # Not strictly required, but good form.
+    return word_count
 
 def print_words(filename):
   """Prints one per line '<word> <count>' sorted by word for the given file."""
